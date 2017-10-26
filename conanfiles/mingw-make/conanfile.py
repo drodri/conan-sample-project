@@ -12,10 +12,10 @@ class MinGwMakeConan(ConanFile):
     
     def source(self):
         self.run("git clone https://github.com/zabeloliver/conan-mingw-make.git")
-        shutil.move("mingw-make/make.exe", "mingw-make/mingw32-make.exe")
+        shutil.move("conan-mingw-make/make.exe", "conan-mingw-make/mingw32-make.exe")
 
     def package(self):
-        self.copy(pattern="*", src="mingw-make", dst="bin/", keep_path=True)
+        self.copy(pattern="*", src="conan-mingw-make", dst="bin/", keep_path=True)
 
     def package_info(self):
         self.env_info.MAKE_PATH = os.path.join(self.package_folder, "bin")
