@@ -1,0 +1,10 @@
+[requires]
+arm-gcc/4.9.3@user/testing
+mingw-make/3.82@user/testing
+
+[generators]
+virtualenv
+cmake
+
+[imports]
+toolchainfile, *.cmake -> .
